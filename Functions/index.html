@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <p id="demo"></p>
-    
- <script>
-    function mul(x){
-        return function(y){
-            return x *y;
+ 
+       <style>
+        body{
+            text-align: center;
         }
+        h1{
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+  <center>
+    <h1 style="color:green">GeeksforGeeks</h1>
+    <h2>HTML DOM onsubmit Event</h2>
+    <form id="formID" action="#">
+        Enter name:
+        <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+</center>
+
+<script>
+    document.getElementById("formID").onsubmit =
+        function() {GFGfun()};
+    
+    function GFGfun() {
+        alert("form submitted");
     }
-    var mulFn = mul(2);
-    console.log(mulFn(5));
-    </script>
-</body>
+</script>
+    </body >
+
 </html>

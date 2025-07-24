@@ -1,25 +1,17 @@
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-const wrap = document.querySelector('.img-wrap');
-const imgs = document.querySelectorAll('.img-wrap img');
+document.getElementById("emailForm").addEventListener("sumbit",function(event){
+   event.preventDefault();
+   const email = document.getElementById("email").value;
+   const errMsg =document.getElementById("error-meassage");
+   const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+   if(pattern.test(email)){
+      errMsg.style.display="none";
+      alert("Email is VAlid! Form Sumbitted.");
+      document.getElementById("emailForm").reset();
 
-let idx =0;
-function showImg(){
-    if(idx >=imgs.length) idx=0;
-    if(idx<0) idx = imgs.length =1;
-    wrap.style.transform=`translate(-${idx *100}%)`;
 
-}
-next.addEventListener('click',()=>{
-    idx++;
-    showImg();
+   }else{
+      errMsg.style.display="block";
+      errMsg.textContent="please enter a valid email";
+   }
+
 })
-prev.addEventListener('click',()=>{
-    idx--;
-    showImg();
-});
-setInterval(()=>{
-    idx++;
-    showImg();
-},3000);
-showImg();
