@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click ME</button>
+    <script>
+        Promise.all([
+            fetch('https://fakestoreapi.com/products/1')
+            .then(reponse => reponse/json()),
+            fetch('https://fakestoreapi.com/products/2')
+            .then(response => response.json()),
+            new Promise((resolve,reject)=>{
+               document.getElementById('btn')
+                .addEventListener('click',()=> resolve('CLIKCED!'));
+            })
+        ])
+        .then(result=>{
+            console.log(result);
+
+        }).catch(error=>{
+            console.log(error)
+        });
+    </script>
+</body>
+</html>
