@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+
+
+
+</style>
 <body>
-    <script>
-      
-      
-      
-    let salaries ={
-        John:100,
-        Ann:160,
-        peter:130
+<script>
+let dog = {
+    name :"Rex",
+    speak(){
+        console.log(`${this.name} says woof!`)
     }
-    alert(salaries+[john+Ann+peter])
-    </script>
+};
+let cat = {
+    name:"Whikers"
+}
+cat.speak = dog.speak;
+cat.speak();
+</script>
+  
 </body>
 </html>
+
+
+
+
+

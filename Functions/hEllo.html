@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .example{
+        margin: 40px auto;
+        max-width: 400px;
+
+      }
+      label,
+      button {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.5em;
+      }
+      input,
+      select,
+      button{
+        padding: .4em 1em;
+      }
+      input:optional,
+      select:optional{
+        background-color: #eeeeee;
+        color: #666666;
+        opacity: 0.5;
+        transition: .3s;
+      }
+      input:optional:hover,
+      select:optional:hover{
+        opacity: 1;
+
+      }
+      input:required,
+      textarea:required{
+        border-bottom: 3px solid #1c87c9;
+      }
+    </style>
+</head>
+<body>
+<h2>
+    :optional selector example 
+</h2>
+  <div class="example">
+    <form action="#">
+        <label>
+            <input type="name" required>Name:
+        </label>
+        <label>
+            <input type="email" required>Email:
+        </label>
+        <label>
+            <input type ="phone" required>Phone (optional)
+        </label>
+        <label>
+            <input type="url" required> Address (optional)
+        </label>
+    </form>
+  </div>
+<script>
+    
+</script>
+</body>
+</html>
